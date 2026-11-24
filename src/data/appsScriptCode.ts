@@ -1,3 +1,1 @@
-import appsScriptRaw from '../../apps-script/Code.gs?raw';
-
-export const APPS_SCRIPT_CODE = appsScriptRaw;
+export const APPS_SCRIPT_CODE = '// Apps Script backend template kept private';
