@@ -1,0 +1,6 @@
+{
+  "name": "SNC Customer Ledger",
+  "description": "Offline-first wholesale mandi customer ledger PWA with vegetable-wise bill details, reconciliation audit, Google Sheets & Drive Apps Script sync, and free GitHub Pages deployment.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

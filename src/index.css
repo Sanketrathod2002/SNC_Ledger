@@ -1,0 +1,75 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  :root {
+    --font-sans: "Manrope", "Noto Sans Devanagari", system-ui, -apple-system, sans-serif;
+    --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+    --ledger-scale: 1;
+  }
+
+  html {
+    font-family: var(--font-sans);
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    -webkit-tap-highlight-color: transparent;
+  }
+}
+
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+.ledger-scaled {
+  font-size: calc(14px * var(--ledger-scale, 1));
+}
+
+.ledger-scaled-title {
+  font-size: calc(20px * var(--ledger-scale, 1));
+}
+
+.ledger-scaled-balance {
+  font-size: calc(32px * var(--ledger-scale, 1));
+}
+
+/* Print Styles for clean A4 Marathi / English statements */
+@media print {
+  @page {
+    size: A4;
+    margin: 10mm;
+  }
+
+  html,
+  body {
+    background: #ffffff !important;
+    color: #111111 !important;
+  }
+
+  .no-print {
+    display: none !important;
+  }
+
+  .print-only {
+    display: block !important;
+  }
+
+  .print-sheet {
+    box-shadow: none !important;
+    border: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 100% !important;
+    max-width: none !important;
+  }
+
+  .print-sheet tr {
+    page-break-inside: avoid;
+  }
+
+  .print-sheet thead {
+    display: table-header-group;
+  }
+}
